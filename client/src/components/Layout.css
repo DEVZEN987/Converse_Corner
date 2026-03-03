@@ -1,0 +1,85 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background blobs */
+.layout::before,
+.layout::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.layout::before {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.2));
+  top: -150px;
+  right: -100px;
+  animation: float 15s ease-in-out infinite;
+}
+
+.layout::after {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(99, 102, 241, 0.2));
+  bottom: -100px;
+  left: -100px;
+  animation: float 18s ease-in-out infinite reverse;
+}
+
+/* Extra floating orb - via wrapper if needed, using main pseudo */
+.main {
+  position: relative;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(99, 102, 241, 0.1));
+  border-radius: 50%;
+  filter: blur(60px);
+  top: 20%;
+  left: -80px;
+  pointer-events: none;
+  animation: float 12s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(40px, -40px); }
+  66% { transform: translate(-30px, 30px); }
+}
+
+.main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 1.25rem;
+  }
+
+  .layout::before,
+  .layout::after {
+    filter: blur(60px);
+    opacity: 0.3;
+  }
+}

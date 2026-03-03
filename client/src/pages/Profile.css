@@ -1,0 +1,122 @@
+.profile-page h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.profile-page .skill-card {
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.profile-page .skill-card:nth-child(1) { animation-delay: 0.05s; }
+.profile-page .skill-card:nth-child(2) { animation-delay: 0.1s; }
+.profile-page .skill-card:nth-child(3) { animation-delay: 0.15s; }
+.profile-page .skill-card:nth-child(4) { animation-delay: 0.2s; }
+.profile-page .skill-card:nth-child(5) { animation-delay: 0.25s; }
+.profile-page .skill-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-info {
+  background: var(--bg-card);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--border-light);
+}
+
+.profile-info p {
+  margin: 0.35rem 0;
+  color: var(--text);
+}
+
+.profile-actions {
+  margin-bottom: 2rem;
+}
+
+.profile-page .btn-primary {
+  padding: 0.75rem 1.5rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.profile-page .skill-card {
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--accent);
+  transition: all var(--transition);
+}
+
+.profile-page .skill-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.profile-page .skill-card h4 {
+  margin: 0 0 0.25rem;
+}
+
+.profile-page .level {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.profile-page .desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+  min-height: 1.5em;
+}
+
+.profile-page .progress-bar {
+  height: 8px;
+  background: var(--border-light);
+  border-radius: var(--radius-full);
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.profile-page .progress-bar > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btn-delete {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background var(--transition);
+}
+
+.btn-delete:hover {
+  background: var(--danger-hover);
+}

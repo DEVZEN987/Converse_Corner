@@ -1,0 +1,19 @@
+{
+  "name": "converse-corner",
+  "version": "1.0.0",
+  "description": "Converse Corner - Skills showcase and messaging platform",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "node scripts/dev.mjs",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

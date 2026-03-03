@@ -1,0 +1,144 @@
+.dashboard h1 {
+  margin-bottom: 0.25rem;
+  font-size: 1.75rem;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.dashboard .welcome {
+  animation: fadeInUp 0.5s ease 0.05s forwards;
+  opacity: 0;
+}
+
+.dashboard-section {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.dashboard-section:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.dashboard-section:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.dashboard-section {
+  margin-bottom: 1.75rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  transition: box-shadow var(--transition);
+}
+
+.dashboard-section:hover {
+  box-shadow: var(--shadow);
+}
+
+.dashboard-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skill-card {
+  padding: 1rem 1.25rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent);
+  transition: transform var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateX(4px);
+}
+
+.skill-card h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.level {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--border-light);
+  border-radius: var(--radius-full);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-list li {
+  padding: 0.875rem 1rem;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  transition: background var(--transition);
+}
+
+.message-list li:hover {
+  background: var(--border-light);
+}
+
+.time {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+.empty {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--accent-hover);
+}

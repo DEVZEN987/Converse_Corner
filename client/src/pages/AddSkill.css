@@ -1,0 +1,86 @@
+.add-skill-page h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.add-skill-form {
+  animation: fadeInUp 0.5s ease 0.1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-skill-form {
+  max-width: 520px;
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow);
+}
+
+.add-skill-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.add-skill-form input,
+.add-skill-form select,
+.add-skill-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition);
+}
+
+.add-skill-form input:focus,
+.add-skill-form select:focus,
+.add-skill-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-muted);
+}
+
+.add-skill-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.add-skill-form button {
+  width: 100%;
+  padding: 0.875rem;
+  margin-top: 1.25rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.add-skill-form button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.add-skill-form button:disabled {
+  opacity: 0.6;
+}

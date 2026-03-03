@@ -1,0 +1,34 @@
+// Feature Engineering & Model-Ready Data Flowchart
+digraph {
+	rankdir=TB size="10,10"
+	node [fillcolor=lightblue fontname=Arial fontsize=10 shape=box style=filled]
+	edge [arrowhead=normal color=black]
+	A [label="Raw Data
+(e.g., CSV files, messy, noisy)"]
+	B [label="1. Data Cleaning
+- Handle missing values
+- Remove outliers"]
+	C [label="2. Feature Selection
+- Choose relevant variables
+- Remove multicollinearity"]
+	D [label="3. Feature Transformation
+- Scaling/Normalization
+- Encoding (one-hot, etc.)"]
+	E [label="4. Feature Creation
+- Polynomial features
+- Interaction terms"]
+	F [label="5. Validation & Splitting
+- Train/Val/Test split
+- Cross-validation"]
+	G [label="Model-Ready Data
+(clean, numerical, balanced)"]
+	H [label="6. Model Training
+(e.g., via scikit-learn)"]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+}
